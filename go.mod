@@ -3,10 +3,24 @@ module github.com/libp2p/go-libp2p-compression-examples
 go 1.14
 
 require (
-	github.com/libp2p/go-libp2p v0.8.1
+	github.com/ipfs/go-bitswap v0.2.20
+	github.com/ipfs/go-blockservice v0.1.3
+	github.com/ipfs/go-cid v0.0.7
+	github.com/ipfs/go-datastore v0.4.4
+	github.com/ipfs/go-ipfs-blockstore v1.0.1
+	github.com/ipfs/go-ipfs-chunker v0.0.5
+	github.com/ipfs/go-ipfs-delay v0.0.1
+	github.com/ipfs/go-ipfs-routing v0.1.0
+	github.com/ipfs/go-ipld-format v0.2.0
+	github.com/ipfs/go-merkledag v0.3.2
+	github.com/ipfs/go-unixfs v0.2.4
+	github.com/libp2p/go-libp2p v0.8.3
 	github.com/libp2p/go-libp2p-core v0.7.0
 	github.com/libp2p/go-libp2p-gzip v0.0.0-00010101000000-000000000000
 	github.com/multiformats/go-multiaddr v0.3.1
+	github.com/multiformats/go-multihash v0.0.14
+	github.com/pkg/errors v0.9.1
+	golang.org/x/sync v0.0.0-20200317015054-43a5402ce75a
 )
 
 // Compression with go-libp2p-core 0.7

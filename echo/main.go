@@ -19,7 +19,6 @@ import (
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
 	"github.com/libp2p/go-libp2p-core/peerstore"
-
 	gzip "github.com/libp2p/go-libp2p-gzip"
 	ma "github.com/multiformats/go-multiaddr"
 )
