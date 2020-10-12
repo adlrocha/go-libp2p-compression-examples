@@ -1,7 +1,7 @@
 # go-libp2p-compression-examples
 This repo includes a set of examples that wraps the use of compression in `go-libp2`. This compression layer lays between the security module and the raw transport. Consequently, if a node uses compression and wants to use a secure channel, the raw transport connection is upgraded to a compressed connection, which is subsequently converted in a secure transport over the compressed connection.
 
-_Disclaimer: This is a proof of concept tested with TCP and UDP, for other tranport protocols such as the QUIC transport things may break a bit_
+_Disclaimer: This is a proof of concept tested with TCP and UDP, for other transport protocols such as the QUIC transport things may break a bit_
 
 ## How was compression added to `go-libp2p`?
 In order to add compression to lib2p the following changes over `libp2p` repos had to be made:
