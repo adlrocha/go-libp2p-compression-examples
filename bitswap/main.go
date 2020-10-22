@@ -7,43 +7,42 @@ import (
 	"time"
 
 	"github.com/libp2p/go-libp2p"
+	cbrotli "github.com/libp2p/go-libp2p-cbrotli"
 	none "github.com/libp2p/go-libp2p-core/compression/none"
 	"github.com/libp2p/go-libp2p-core/host"
 	"github.com/libp2p/go-libp2p-core/metrics"
 	gzip "github.com/libp2p/go-libp2p-gzip"
+	"github.com/libp2p/go-libp2p/config"
 )
 
-func startRun(compression bool, iterations int, size int) *metrics.BandwidthCounter {
+func startRun(compression string, iterations int, size int) *metrics.BandwidthCounter {
 	ctx := context.Background()
 	var h1, h2 host.Host
 	var err error
 	reporter := metrics.NewBandwidthCounter()
 
-	if compression {
-		fmt.Println("[*] Starting libp2p nodes with compression")
-		h1, err = libp2p.New(ctx, libp2p.Compression(gzip.ID, gzip.New), libp2p.BandwidthReporter(reporter))
-		if err != nil {
-			panic(err)
-		}
-		h2, err = libp2p.New(ctx, libp2p.Compression(gzip.ID, gzip.New))
-		if err != nil {
-			panic(err)
-		}
-		defer h1.Close()
-		defer h2.Close()
-	} else {
-		fmt.Println("[*] Starting libp2p nodes without compression")
-		h1, err = libp2p.New(ctx, libp2p.Compression(none.ID, none.New))
-		if err != nil {
-			panic(err)
-		}
-		h2, err = libp2p.New(ctx, libp2p.Compression(none.ID, none.New))
-		if err != nil {
-			panic(err)
-		}
-		defer h1.Close()
-		defer h2.Close()
+	var compOpt config.Option
+
+	switch compression {
+	case "gzip":
+		compOpt = libp2p.Compression(gzip.ID, gzip.New)
+	case "cbrotli":
+		libp2p.Compression(cbrotli.ID, cbrotli.New)
+	default:
+		libp2p.Compression(none.ID, none.New)
 	}
+
+	fmt.Println("[*] Starting libp2p compressed with", compression)
+	h1, err = libp2p.New(ctx, compOpt, libp2p.BandwidthReporter(reporter))
+	if err != nil {
+		panic(err)
+	}
+	h2, err = libp2p.New(ctx, compOpt)
+	if err != nil {
+		panic(err)
+	}
+	defer h1.Close()
+	defer h2.Close()
 
 	// Create new blockstores for
 	bstore1, err := CreateBlockstore(ctx, 1000)
@@ -94,12 +93,12 @@ func startRun(compression bool, iterations int, size int) *metrics.BandwidthCoun
 	return reporter
 }
 func main() {
-	nocompression := flag.Bool("nocompression", false, "disable compression")
+	compression := flag.String("compression", "gzip", "Select a compression algorithm")
 	iterations := flag.Int("iterations", 100, "number of iterations for the random file exchange")
 	size := flag.Int("size", 1234567, "size of the random file")
 	flag.Parse()
 
-	_ = startRun(!*nocompression, *iterations, *size)
+	_ = startRun(*compression, *iterations, *size)
 
 	// reporter := startRun(*compressed, *iterations, *size)
 	// fmt.Println(float64(reporter.GetBandwidthTotals().TotalOut))

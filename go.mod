@@ -14,7 +14,9 @@ require (
 	github.com/ipfs/go-ipld-format v0.2.0
 	github.com/ipfs/go-merkledag v0.3.2
 	github.com/ipfs/go-unixfs v0.2.4
+	github.com/klauspost/compress v1.11.1 // indirect
 	github.com/libp2p/go-libp2p v0.8.3
+	github.com/libp2p/go-libp2p-cbrotli v0.0.0-00010101000000-000000000000 // indirect
 	github.com/libp2p/go-libp2p-core v0.7.0
 	github.com/libp2p/go-libp2p-gzip v0.0.0-00010101000000-000000000000
 	github.com/multiformats/go-multiaddr v0.3.1
@@ -35,3 +37,5 @@ replace github.com/libp2p/go-libp2p-gzip => github.com/adlrocha/go-libp2p-gzip v
 replace github.com/libp2p/go-conn-compression-multistream => github.com/adlrocha/go-conn-compression-multistream v0.0.0-20201008054958-988bc118b907
 
 replace github.com/libp2p/go-libp2p-transport-upgrader => github.com/adlrocha/go-libp2p-transport-upgrader v0.3.1-0.20201009165416-df4b32d10a02
+
+replace github.com/libp2p/go-libp2p-cbrotli => github.com/adlrocha/go-libp2p-cbrotli v0.0.0-20201022095630-f5f18e9677b1

@@ -9,6 +9,8 @@ github.com/adlrocha/go-libp2p v0.11.1-0.20201008063238-d1909d9adebc h1:LqYYRj+ab
 github.com/adlrocha/go-libp2p v0.11.1-0.20201008063238-d1909d9adebc/go.mod h1:MOzduE9LDbSKvMc+Ug3CdAqK3XUQFHwwjOeacaUAkeQ=
 github.com/adlrocha/go-libp2p v0.11.1-0.20201009165647-9e32a3d1018e h1:15HR/QWRY8gbKWYYgCL3wSkc1zKaM9kn1nUR+TbaE1A=
 github.com/adlrocha/go-libp2p v0.11.1-0.20201009165647-9e32a3d1018e/go.mod h1:MOzduE9LDbSKvMc+Ug3CdAqK3XUQFHwwjOeacaUAkeQ=
+github.com/adlrocha/go-libp2p-cbrotli v0.0.0-20201022095630-f5f18e9677b1 h1:6Q73gUtf0TFDg+NmyTnaE4bbiHFqcfa+LM2CeeCb9sY=
+github.com/adlrocha/go-libp2p-cbrotli v0.0.0-20201022095630-f5f18e9677b1/go.mod h1:56uS2lEf6X66uEy43kUd9AZGosvBCuh3xszPFS0bVTw=
 github.com/adlrocha/go-libp2p-core v0.6.2-0.20201008055055-b309947fc237 h1:pnwlPPNI1LmXgCpdOX8wpUU3i1qOVRAZmTAUYMkqRaA=
 github.com/adlrocha/go-libp2p-core v0.6.2-0.20201008055055-b309947fc237/go.mod h1:FfewUH/YpvWbEB+ZY9AQRQ4TAD8sJBt/G1rVvhz5XT8=
 github.com/adlrocha/go-libp2p-gzip v0.0.0-20201008055912-3c159e9de091 h1:SRAKpJk0aBUe4iOv/bLAas0diC8FESLpLQUA8//bafI=
@@ -47,6 +49,8 @@ github.com/davidlazar/go-crypto v0.0.0-20170701192655-dcfb0a7ac018/go.mod h1:rQY
 github.com/dgraph-io/badger v1.6.1/go.mod h1:FRmFw3uxvcpa8zG3Rxs0th+hCLIuaQg8HlNV5bjgnuU=
 github.com/dgraph-io/ristretto v0.0.2/go.mod h1:KPxhHT9ZxKefz+PCeOGsrHpl1qZ7i70dGTu2u+Ahh6E=
 github.com/dgryski/go-farm v0.0.0-20190423205320-6a90982ecee2/go.mod h1:SqUrOPUnsFjfmXRMNPybcSiG0BgUW2AuFH8PAnS2iTw=
+github.com/dropbox/rust-brotli v0.0.0-20200819074738-458f5780a376 h1:lf90Iiyr8YFQv/LBmpliXvFiTBevOvRfyQgi2IEgmxA=
+github.com/dropbox/rust-brotli v0.0.0-20200819074738-458f5780a376/go.mod h1:o9aagpQtkLuBPi9cZUr2JaEc8bKXsTUre1iljDlfDLA=
 github.com/dustin/go-humanize v1.0.0/go.mod h1:HtrtbFcZ19U5GC7JDqmcUSB87Iq5E25KnS6fMYU6eOk=
 github.com/flynn/noise v0.0.0-20180327030543-2492fe189ae6 h1:u/UEqS66A5ckRmS4yNpjmVH56sVtS/RfclBAYocb4as=
 github.com/flynn/noise v0.0.0-20180327030543-2492fe189ae6/go.mod h1:1i71OnUq3iUe1ma7Lr6yG6/rjvM3emb6yoL7xLFzcVQ=
@@ -67,6 +71,8 @@ github.com/golang/protobuf v1.4.0-rc.2/go.mod h1:LlEzMj4AhA7rCAGe4KMBDvJI+AwstrU
 github.com/golang/protobuf v1.4.0-rc.4.0.20200313231945-b860323f09d0/go.mod h1:WU3c8KckQ9AFe+yFwt9sWVRKCVIyN9cPHBJSNnbL67w=
 github.com/golang/protobuf v1.4.0/go.mod h1:jodUvKwWbYaEsadDk5Fwe5c77LiNKVO9IDvqG2KuDX0=
 github.com/golang/snappy v0.0.0-20180518054509-2e65f85255db/go.mod h1:/XxbfmMg8lxefKM7IXC3fBNl/7bRcc72aCRzEWrmP2Q=
+github.com/google/brotli/go/cbrotli v0.0.0-20201008125033-fcda9db7fd55 h1:NUJM1LC//7oSHaLGpvXhdiT+jjESax/2UJUcQCJrTA4=
+github.com/google/brotli/go/cbrotli v0.0.0-20201008125033-fcda9db7fd55/go.mod h1:nOPhAkwVliJdNTkj3gXpljmWhjc4wCaVqbMJcPKWP4s=
 github.com/google/go-cmp v0.3.0/go.mod h1:8QqcDgzrUqlUb/G2PQTWiueGozuR1884gddMywk6iLU=
 github.com/google/go-cmp v0.3.1/go.mod h1:8QqcDgzrUqlUb/G2PQTWiueGozuR1884gddMywk6iLU=
 github.com/google/go-cmp v0.4.0/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
@@ -204,6 +210,8 @@ github.com/kisielk/errcheck v1.1.0/go.mod h1:EZBBE59ingxPouuu3KfxchcWSUPOHkagtvW
 github.com/kisielk/errcheck v1.2.0/go.mod h1:/BMXB+zMLi60iA8Vv6Ksmxu/1UDYcXs4uQLJ+jE2L00=
 github.com/kisielk/gotool v1.0.0/go.mod h1:XhKaO+MFFWcvkIS/tQcRk01m1F5IRFswLeQ+oQHNcck=
 github.com/kkdai/bstream v0.0.0-20161212061736-f391b8402d23/go.mod h1:J+Gs4SYgM6CZQHDETBtE9HaSEkGmuNXF86RwHhHUvq4=
+github.com/klauspost/compress v1.11.1 h1:bPb7nMRdOZYDrpPMTA3EInUQrdgoBinqUuSwlGdKDdE=
+github.com/klauspost/compress v1.11.1/go.mod h1:aoV0uJVorq1K+umq18yTdKaF57EivdYsUV+/s2qKfXs=
 github.com/koron/go-ssdp v0.0.0-20191105050749-2e1c40ed0b5d h1:68u9r4wEvL3gYg2jvAOgROwZ3H+Y3hIDk4tbbmIjcYQ=
 github.com/koron/go-ssdp v0.0.0-20191105050749-2e1c40ed0b5d/go.mod h1:5Ky9EC2xfoUKUor0Hjgi2BJhCSXJfMOFlmyYrVKGQMk=
 github.com/kr/pretty v0.1.0/go.mod h1:dAy3ld7l9f0ibDNOQOHHMYYIIbhfbHSm3C4ZsoJORNo=
